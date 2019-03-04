@@ -1,0 +1,26 @@
+<h2>My Customers</h2>
+<ul class="customers">
+  
+<input type="text" placeholder="username" [(ngModel)]="customer.name">
+<input type="text" placeholder="email"  [(ngModel)]="customer.email">
+<input type="button" (click)="addCustomer()" value="ADD">
+
+
+<div class="log">
+    <input type="text" placeholder="id" [(ngModel)]="num">
+  <input type="button" (click)="removeCustomer(num)" value="REMOVE">
+</div>
+
+<!-- <h2>{{editCustomer.name | uppercase}} Details</h2>
+<div><span> </span>{{editCustomer.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="editCustomer.name" placeholder="name">
+  </label>
+</div> -->
+ 
+
+<li *ngFor="let customer of customers">`
+    <span class="badge">{{customer.id}} {{customer.name}} {{customer.email}} </span>  
+  </li>
+</ul>

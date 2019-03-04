@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+        addbutton=function(){
+            var btn = document.createElement("BUTTON");        // Create a <button> element
+var t = document.createTextNode("addbutton");       // Create a text node
+btn.appendChild(t);                                // Append the text to <button>
+document.body.appendChild(btn);
+        }
+		print = function(msg){
+			 return function(){console.log(msg);
+             };
+		}
+		counter = function(source,count){
+			for(var i=0; i<count;i++ ){
+				setTimeout(print (source +":"+i + " seconds are over."),1000*i);
+			}
+		}
+	</script>
+	</script>
+	<form>
+		<input type="text" name="" value="sudha">
+		<input type="button" onclick="counter('button1', 20)" name="" value="button 1">
+		<input type="button" onclick="counter('button2', 20)" name="" value="button 2">
+		
+	</form>
+	
+</body>
+</html>

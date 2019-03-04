@@ -1,0 +1,8 @@
+<h1>sample  buttons</h1>
+<button (click)="addButton()">ADD BUTTON</button>
+<input type="text" value="button" [(ngModel)]="button">
+<button (click)="removeButton(button)">REMOVE BUTTON</button>
+<li *ngFor="let button of buttons">
+  <button type="button">{{button.name}} </button>
+</li>
+<br>

@@ -1,0 +1,19 @@
+<div class="container">
+  
+  <input type="text" placeholder="enter name" [(ngModel)]="employee.name" >
+  <input type="text" placeholder="enter email" [(ngModel)]="employee.email" > 
+  <input type="text" placeholder="enter phonenumber" [(ngModel)]="employee.phonenumber" > 
+  <input type="text" placeholder="enter address" [(ngModel)]="employee.address" > 
+</div>
+<input type="button" value="ADD EMPLOYEE" (click)="addEmployee()">
+<div class="log">
+  <input type="text" placeholder=" enter id" [(ngModel)]="num">
+<input type="button" (click)="deleteEmployee(num)" value="DELETE EMPLOYEE">
+</div>
+
+<h2>My Employees</h2>
+<div class="employees">
+  <li *ngFor="let employee of employees">
+    <span class="badge">{{employee.id}}</span> {{employee.name}} {{employee.email}}  {{employee.phonenumber}} {{employee.address}}
+  </li>
+</div>
